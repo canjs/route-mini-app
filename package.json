@@ -1,0 +1,24 @@
+{
+  "name": "route-mini-app",
+  "version": "5.0.0",
+  "description": "",
+  "main": "components.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canjs/route-mini-app.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Bitovi",
+    "email": "contact@bitovi.com",
+    "url": "http://bitovi.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/canjs/route-mini-app/issues"
+  },
+  "homepage": "https://github.com/canjs/route-mini-app#readme"
+}
