@@ -1,7 +1,7 @@
 import { Component } from "//unpkg.com/can@5/core.mjs";
 import "./component-slider.mjs";
 
-Component.extend({
+export const TaskEditor = Component.extend({
     tag: "task-editor",
     view: `
         {{#if logout}}

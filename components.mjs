@@ -1,7 +1,7 @@
 import { Component, stacheRouteHelpers } from "//unpkg.com/can@5/core.mjs";
-import "./task-editor.mjs";
+export { TaskEditor } from "./task-editor.mjs";
 
-Component.extend({
+export const PageHome = Component.extend({
     tag: "page-home",
     view: `
         <h1><code>&lt;page-home&gt;</code></h1>
@@ -17,7 +17,7 @@ Component.extend({
     `
 });
 
-Component.extend({
+export const PageLogin = Component.extend({
     tag: "page-login",
     view: `
         <h1><code>&lt;page-login&gt;</code></h1>
