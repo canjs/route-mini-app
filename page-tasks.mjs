@@ -1,7 +1,7 @@
 import { Component } from "//unpkg.com/can@5/core.mjs";
-import "./component-slider.mjs";
+import "./percent-slider.mjs";
 
-export const TaskEditor = Component.extend({
+const TaskEditor = Component.extend({
     tag: "task-editor",
     view: `
         {{#if logout}}
@@ -54,3 +54,5 @@ export const TaskEditor = Component.extend({
         }
     }
 });
+
+export default TaskEditor;

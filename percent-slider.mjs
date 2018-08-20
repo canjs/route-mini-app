@@ -6,7 +6,7 @@ function width(el) {
         - parseFloat( cs.getPropertyValue("padding-left") );
 }
 
-Component.extend({
+const PercentSlider = Component.extend({
     tag: "percent-slider",
     view: `
         <div class="slider"
@@ -69,3 +69,5 @@ Component.extend({
         }
     }
 });
+
+export default PercentSlider;
