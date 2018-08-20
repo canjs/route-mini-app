@@ -6,20 +6,6 @@ Component.extend({
     view: `
         {{componentToShow}}
     `,
-//        {{# switch(componentToShow) }}
-//            {{# case("home") }}
-//                <page-home isLoggedIn:from="isLoggedIn" logout:from="logout"/>
-//            {{/ case }}
-//            {{# case("tasks") }}
-//                <task-editor id:from="taskId" logout:from="logout"/>
-//            {{/ case }}
-//            {{# case("login") }}
-//                <page-login isLoggedIn:bind="isLoggedIn" />
-//            {{/ case }}
-//            {{# default }}
-//                <h2>Page Missing</h2>
-//            {{/ default }}
-//        {{/ switch }}
     ViewModel: {
         page: "string",
         taskId: "string",
@@ -37,7 +23,7 @@ Component.extend({
                     return new PageHome({
                         viewModel: {
                             isLoggedIn: value.from(this, "isLoggedIn"),
-                            logout: value.from(this, "logout"),
+                            logout: this.logout.bind(this)
                         }
                     });
                     break;
@@ -45,16 +31,14 @@ Component.extend({
                     return new TaskEditor({
                         viewModel: {
                             id: value.from(this, "taskId"),
-                            logout: value.from(this, "logout")
+                            logout: this.logout.bind(this)
                         }
                     });
                     break;
-                case "login":
-                    return new PageLogin({
-                        viewModel: {
-                            isLoggedIn: value.bind(this, "isLoggedIn")
-                        }
-                    });
+                default:
+                    var page404 = document.createElement("h2");
+                    page404.innerHTML = "Page Missing";
+                    return page404;
                     break;
             }
         },
